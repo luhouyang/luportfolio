@@ -1,0 +1,44 @@
+<header class="wrapper row space-between">
+    <img src="/assets/darkmode.svg" alt="Logo Image" class="logo" />
+  
+    <!-- <div class="row gap-1">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/activities" routerLinkActive="active">Activities</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </div> -->
+  
+    <p-menubar [model]="items">
+      <ng-template pTemplate="item" let-item>
+        <ng-container *ngIf="item.route; else urlRef">
+          <a [routerLink]="item.route" class="p-menuitem-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">
+            <span [class]="item.icon"></span>
+            <span class="ml-5">{{ item.label }}</span>
+          </a>
+        </ng-container>
+        <ng-template #urlRef>
+          <a
+            *ngIf="item.url; else noLink"
+            [href]="item.url"
+            class="p-menuitem-link"
+          >
+            <span [class]="item.icon"></span>
+            <span class="ml-5">{{ item.label }}</span>
+          </a>
+        </ng-template>
+        <ng-template #noLink>
+          <div class="p-menuitem-link">
+            <span [class]="item.icon"></span>
+            <span class="ml-5">{{ item.label }}</span>
+            <span class="pi pi-fw pi-angle-down ml-5"></span>
+          </div>
+        </ng-template>
+      </ng-template>
+    </p-menubar>
+  </header>
+  

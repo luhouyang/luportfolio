@@ -24,7 +24,10 @@
       "dom"
     ],
     "types": [
-        "@cloudflare/workers-types/2023-07-01"
+        "@cloudflare/workers-types/2023-07-01",
+        "jest",
+        "mocha",
+        "jasmine"
     ]
   },
   "angularCompilerOptions": {
