@@ -151,3 +151,13 @@ app-root {
   pointer-events: none;
   opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Switch to column layout for smaller screens */
+  }
+
+  .column {
+    width: 100%; /* Make each column occupy full width */
+  }
+}
