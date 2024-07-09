@@ -1,9 +1,28 @@
 .wrapper {
-    height: 80px;
-  
-    border-top: 1px solid var(--border-color);
-    box-sizing: border-box;
-  
-    padding-bottom: 10px;
+  height: 80px;
+
+  border-top: 1px solid var(--border-color);
+  box-sizing: border-box;
+
+  padding-bottom: 10px;
+}
+
+@media (max-width: 960px) {
+  .row {
+    flex-direction: row;
   }
-  
+
+  .column {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+}
