@@ -31,8 +31,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               {
-                "glob": "**/*",
-                "input": "public"
+                "glob": "public/favicon.ico"
               },
               "src/_routes.json"
             ],
