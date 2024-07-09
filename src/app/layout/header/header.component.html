@@ -14,7 +14,7 @@
     </div> -->
   
     <p-menubar [model]="items">
-      <ng-template pTemplate="item" let-item>
+      <ng-template pTemplate="item" let-item let-root="root">
         <ng-container *ngIf="item.route; else urlRef">
           <a [routerLink]="item.route" class="p-menuitem-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">
             <span [class]="item.icon"></span>

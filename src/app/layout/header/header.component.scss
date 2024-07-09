@@ -29,4 +29,32 @@
       margin: 0;
     }
   }
+
+  @media (max-width: 960px) {
+    .row {
+      flex-direction: row;
+    }
+  
+    .column {
+      flex-direction: column;
+    }
+
+    p-menubar {
+      min-width: 30%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .row {
+      flex-direction: row;
+    }
+  
+    .column {
+      flex-direction: column;
+    }
+
+    p-menubar {
+      min-width: 40%;
+    }
+  }
   

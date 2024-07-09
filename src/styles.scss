@@ -43,12 +43,20 @@ app-root {
   margin-left: 5px;
 }
 
+.mt-5 {
+  margin-top: 5px;
+}
+
 .mt-15 {
   margin-top: 15px;
 }
 
 .mt-25 {
   margin-top: 25px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
 }
 
 .mb-15 {
@@ -152,6 +160,7 @@ app-root {
   opacity: 0.5;
 }
 
+// resizing
 @media (max-width: 768px) {
   .row {
     flex-direction: column; /* Switch to column layout for smaller screens */
@@ -159,5 +168,86 @@ app-root {
 
   .column {
     width: 100%; /* Make each column occupy full width */
+  }
+}
+
+// animations
+@keyframes smoothRgbTextFlash {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.smoothColour {
+  &:hover {
+    display: inline-block; /* Ensures the element wraps the text content */
+    background: linear-gradient(
+      60deg,
+      rgb(216, 13, 13),
+      rgb(219, 146, 11),
+      rgb(207, 207, 15),
+      rgb(8, 121, 8),
+      rgb(11, 205, 205),
+      rgb(8, 8, 206),
+      rgb(205, 102, 205),
+      rgb(132, 32, 179),
+      rgb(207, 103, 207),
+      rgb(10, 10, 213),
+      rgb(10, 208, 208),
+      rgb(6, 131, 6),
+      rgb(202, 202, 15),
+      rgb(225, 150, 10),
+      rgb(202, 16, 16),
+      rgb(200, 8, 8)
+    );
+    background-size: 1600%; /* Make sure the background size covers the entire gradient */
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // transition: background 0.5s ease-in-out;
+    animation: smoothRgbTextFlash 25s infinite linear;
+  }
+}
+
+@keyframes fastRgbTextFlash {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.fastColour {
+  &:hover {
+    display: inline-block; /* Ensures the element wraps the text content */
+    background: linear-gradient(
+      60deg,
+      rgb(216, 13, 13),
+      rgb(219, 146, 11),
+      rgb(207, 207, 15),
+      rgb(8, 121, 8),
+      rgb(11, 205, 205),
+      rgb(8, 8, 206),
+      rgb(205, 102, 205),
+      rgb(132, 32, 179),
+      rgb(207, 103, 207),
+      rgb(10, 10, 213),
+      rgb(10, 208, 208),
+      rgb(6, 131, 6),
+      rgb(202, 202, 15),
+      rgb(225, 150, 10),
+      rgb(202, 16, 16),
+      rgb(161, 4, 4)
+    );
+    background-size: 1550%; /* Make sure the background size covers the entire gradient */
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // transition: background 0.5s ease-in-out;
+    animation: fastRgbTextFlash 5s infinite linear;
   }
 }
