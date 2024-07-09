@@ -32,7 +32,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public/favicon.ico"
+                "input": ""
               },
               "src/_routes.json"
             ],
