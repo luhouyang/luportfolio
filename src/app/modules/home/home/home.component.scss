@@ -8,8 +8,7 @@
   }
 
   .image {
-    min-width: 300px;
-    max-width: 400px;
+    width: 400px;
 
     .profile-image {
       display: block;
@@ -45,3 +44,13 @@
     }
   }
 }
+
+@media (min-width: 2000px) {
+  .wrapper {
+    .image {
+      min-width: 500px;
+    }
+  }
+}
+
+
