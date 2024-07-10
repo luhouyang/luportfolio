@@ -28,6 +28,11 @@
     padding: 0.5rem;
     margin: 0;
   }
+
+  .p-menuitem-link:hover {
+    color: var(--cyan-100);
+    outline: none; /* Optional: removes the default focus outline */
+  }
 }
 
 @media (max-width: 960px) {

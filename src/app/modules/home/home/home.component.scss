@@ -8,11 +8,32 @@
   }
 
   .image {
-    width: 100%;
+    min-width: 300px;
     max-width: 400px;
 
     .profile-image {
+      display: block;
+      width: 100%;
       border-radius: 50%;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 1.5em;
+  
+    li {
+      position: relative;
+      padding-left: 1.5em; /* Adjust the left padding to make room for the custom bullets */
+      margin-bottom: 0.5em; /* Optional: Add some space between list items */
+  
+      &::before {
+        content: "\2726"; /* Unicode for a 4-point star */
+        position: absolute;
+        left: 0;
+        font-size: 1em; /* Adjust the size of the star */
+        color: #00fff2; /* Optional: Change the color of the star */
+      }
     }
   }
 }
@@ -20,8 +41,7 @@
 @media (max-width: 768px) {
   .wrapper {
     .image {
-      max-width: none;
-      width: 100%;
+      max-width: 300px;
     }
   }
 }
