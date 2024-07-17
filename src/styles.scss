@@ -145,6 +145,11 @@ app-root {
   align-items: end;
 }
 
+// card
+.three-items {
+  width: 33%;
+}
+
 // others
 .full-center {
   align-items: center;
@@ -280,7 +285,7 @@ app-root {
   }
 }
 
-.fastBorderColour {
+.fastBorderColourCircular {
   position: relative;
   display: inline-block;
 
@@ -311,6 +316,42 @@ app-root {
     );
     background-size: 1000%;
     border-radius: 50%; /* Matches the profile image's border-radius */
+    z-index: -1;
+    animation: borderRgbFlash 1.25s alternate-reverse ease-out;
+  }
+}
+
+.fastBorderColourCard {
+  position: relative;
+  display: inline-block;
+
+  &:hover::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      60deg,
+      transparent,
+      transparent,
+      transparent,
+      rgb(255, 0, 0),
+      rgb(255, 128, 0),
+      rgb(255, 255, 0),
+      rgb(0, 255, 0),
+      rgb(0, 255, 255),
+      rgb(0, 0, 255),
+      rgb(255, 0, 255),
+      rgb(128, 0, 255),
+      rgb(255, 0, 0),
+      transparent,
+      transparent,
+      transparent
+    );
+    background-size: 2000%;
+    border-radius: 1%; /* Matches the profile image's border-radius */
     z-index: -1;
     animation: borderRgbFlash 1.25s alternate-reverse ease-out;
   }

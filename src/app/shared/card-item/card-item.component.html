@@ -1,0 +1,18 @@
+<div class="wrapper mt-15 fastBorderColourCard">
+  <p-card header="{{ cardInfo.header }}">
+    <ng-template pTemplate="header">
+      <img class="image" alt="Card" src="{{ cardInfo.imagePath }}" />
+    </ng-template>
+    <p>{{ cardInfo.content }}</p>
+    <ng-template pTemplate="footer">
+      <a
+        href="{{ cardInfo.hyperlink }}"
+        aria-label="More Info"
+        target="_blank"
+        rel="noopener"
+      >
+        <p-button label="More Info" class="w-full" styleClass="w-full" />
+      </a>
+    </ng-template>
+  </p-card>
+</div>

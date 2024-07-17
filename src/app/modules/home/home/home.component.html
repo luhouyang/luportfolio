@@ -1,29 +1,57 @@
 <div class="wrapper">
-  <div class="row gap-2">
-    <div class="column justify-center">
-      <div class="row align-center">
-        <div class="column image fastBorderColour">
-          <img
-            src="/public/assets/profile_image.webp"
-            alt="Profile Image"
-            class="profile-image"
-          />
+  <div class="column gap-5">
+    <!-- PROFILE PIC & SELF INTRO -->
+    <div class="row gap-2">
+      <div class="column justify-center">
+        <div class="row align-center">
+          <div class="column image fastBorderColourCircular">
+            <img
+              src="/public/assets/profile_image.webp"
+              alt="Profile Image"
+              class="profile-image"
+            />
+          </div>
         </div>
+      </div>
+
+      <div class="about column justify-center">
+        <!-- <h1 class="mb-5"><span class="smoothColour">About</span></h1> -->
+        <p>Hello! I'm</p>
+        <div class="myname">
+          <h1 class="fastColour">Lu Hou Yang</h1>
+        </div>
+        <p class="introduction">
+          currently pursuing a Bachelor's degree in Computer Science at
+          Universiti Teknologi PETRONAS. Born and raised in Sabah, Malaysia, I
+          have a strong passion for technology and innovation. My interests span
+          across Web/App Development, AI/ML, Raspberry Pi projects, and Computer
+          Hardware. When I'm not coding, you can find me playing the piano.
+        </p>
+
+        <br />
+        <p>
+          I am always eager to learn and grow in the tech field, and I look
+          forward to contributing my skills to exciting and impactful projects.
+        </p>
       </div>
     </div>
 
-    <div class="column about">
-      <h1 class="mb-5"><span class="smoothColour">About</span></h1>
-      <p class="introduction">
-        Hello! I'm <b class="fastColour">Lu Hou Yang</b>, currently pursuing a
-        Bachelor's degree in Computer Science at Universiti Teknologi PETRONAS.
-        Born and raised in Sabah, Malaysia, I have a strong passion for
-        technology and innovation. My interests span across Web/App Development,
-        AI/ML, Raspberry Pi projects, and Computer Hardware. When I'm not
-        coding, you can find me playing the piano.
-      </p>
-      <br />
-      <h3><span class="smoothColour">Technical Skills</span></h3>
+    <!-- Open Source Contributions, FYP Progress, UTP Google Classroom -->
+    <div>
+      <h2><span class="smoothColour">Ongoing Projects</span></h2>
+      <hr class="solid" />
+      <div class="row gap-2">
+        <app-card-item
+          class="three-items"
+          *ngFor="let project of ongoingProjectList"
+          [cardInfo]="project"
+        ></app-card-item>
+      </div>
+    </div>
+
+    <div>
+      <h2><span class="smoothColour">Technical Skills</span></h2>
+      <hr class="solid" />
       <ul>
         <li><b>Programming Languages</b>: Python, Dart, Java, C++</li>
         <li>
@@ -31,9 +59,11 @@
           Platform, Cloudflare, GitHub, Angular
         </li>
       </ul>
+    </div>
 
-      <br />
-      <h3><span class="smoothColour">Activities and Involvements</span></h3>
+    <div>
+      <h2><span class="smoothColour">Activities and Involvements</span></h2>
+      <hr class="solid" />
       <ul>
         <li>
           <b>Workshops</b>: Shared in TensorFlow, Flutter, & Firebase workshops
@@ -47,11 +77,6 @@
           various tech & non-tech events
         </li>
       </ul>
-
-      <p>
-        I am always eager to learn and grow in the tech field, and I look
-        forward to contributing my skills to exciting and impactful projects.
-      </p>
     </div>
   </div>
 </div>

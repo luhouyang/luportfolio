@@ -5,6 +5,19 @@
     .introduction {
       text-align: justify;
     }
+
+    .myname {
+      font-size: x-large;
+      background-image: linear-gradient(
+        to bottom right,
+        #00fff2,
+        #78f5ef,
+        #dffffd
+      );
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .image {
@@ -17,15 +30,19 @@
     }
   }
 
+  h2 {
+    font-size: xx-large;
+  }
+
   ul {
     list-style: none;
     padding-left: 1.5em;
-  
+
     li {
       position: relative;
       padding-left: 1.5em; /* Adjust the left padding to make room for the custom bullets */
       margin-bottom: 0.5em; /* Optional: Add some space between list items */
-  
+
       &::before {
         content: "\2726"; /* Unicode for a 4-point star */
         position: absolute;
@@ -47,10 +64,14 @@
 
 @media (min-width: 2000px) {
   .wrapper {
+    .about {
+      .myname {
+        font-size: xx-large;
+      }
+    }
+
     .image {
       min-width: 500px;
     }
   }
 }
-
-
