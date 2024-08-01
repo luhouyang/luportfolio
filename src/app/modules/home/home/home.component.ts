@@ -20,7 +20,7 @@ export class HomeComponent {
     {
       header: 'Coming Soon!',
       content:
-        'Exciting new content is on the way! Stay tuned for updates and be the first to discover what’s coming next. Check back soon for more details and information!',
+        'Exciting new content is on the way! Stay tuned for updates and be the first to discover what\'s coming next. Check back soon for more details and information!',
       imagePath: 'https://primefaces.org/cdn/primeng/images/card-ng.jpg',
       hyperlink: 'https://github.com/luhouyang',
       fragment: 'googleclassroom',
@@ -28,7 +28,7 @@ export class HomeComponent {
     {
       header: 'Coming Soon!',
       content:
-        'Exciting new content is on the way! Stay tuned for updates and be the first to discover what’s coming next. Check back soon for more details and information!',
+        'Exciting new content is on the way! Stay tuned for updates and be the first to discover what\'s coming next. Check back soon for more details and information!',
       imagePath: 'https://primefaces.org/cdn/primeng/images/card-ng.jpg',
       hyperlink: 'https://github.com/luhouyang',
       fragment: 'googleclassroom',
