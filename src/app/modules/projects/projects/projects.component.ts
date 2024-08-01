@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 // import { CardInfo } from '../../../shared/card-info';
 
 @Component({
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  constructor(private route: ActivatedRoute) {
+
+  }
+  
+  ngOnInit() {
+    this.route.params.subscribe((params) => {
+      const id: string =  params['id'];
+    });
+  }
   // ongoingProjectList: Array<CardInfo> = [
   //   {
   //     header: 'GDSC-UTP GC',
