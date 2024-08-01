@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardInfo } from '../../../shared/card-info';
+// import { CardInfo } from '../../../shared/card-info';
 
 @Component({
   selector: 'app-projects',
