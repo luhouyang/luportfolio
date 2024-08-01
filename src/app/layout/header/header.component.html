@@ -13,7 +13,7 @@
       <a routerLink="/contact" routerLinkActive="active">Contact</a>
     </div> -->
 
-  <p-menubar [model]="items">
+  <p-menubar [model]="items" class="menu">
     <ng-template pTemplate="item" let-item let-root="root">
       <ng-container *ngIf="item.route; else urlRef">
         <a

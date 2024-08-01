@@ -5,12 +5,13 @@
     </ng-template>
     <p>{{ cardInfo.content }}</p>
     <ng-template pTemplate="footer">
-      <a
+      <!-- <a
         href="{{ cardInfo.hyperlink }}"
         aria-label="More Info"
         target="_blank"
         rel="noopener"
-      >
+      > -->
+      <a href="{{ cardInfo.hyperlink }}" aria-label="More Info">
         <p-button label="More Info" class="w-full" styleClass="w-full" />
       </a>
     </ng-template>
