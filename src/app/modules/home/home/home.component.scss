@@ -54,10 +54,20 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
   .wrapper {
+    .about {
+      .myname {
+        font-size: larger;
+      }
+    }
+
     .image {
       max-width: 300px;
+    }
+
+    .projects {
+      width: 100%;
     }
   }
 }

@@ -8,7 +8,6 @@
   }
 
   .description {
-
     top: 20px; /* Adjust as needed */
     right: 20px; /* Adjust as needed */
     // background-color: #ff5722; /* Solid color background */
@@ -19,7 +18,7 @@
     width: auto; /* Adjust width as needed */
     box-sizing: border-box;
   }
-  
+
   .description p {
     margin: 0;
     line-height: 1.5;
@@ -35,5 +34,18 @@
     border-radius: 5px;
     font-weight: bold;
     margin-top: 10px;
+  }
+}
+
+// resizing
+@media (max-width: 768px) {
+  .wrapper {
+    .image {
+      width: 100%;
+    }
+
+    .description {
+      clip-path: none;
+    }
   }
 }
