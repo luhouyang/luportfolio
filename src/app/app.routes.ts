@@ -14,6 +14,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'projects/#googleclassroom',
+    loadChildren: () =>
+      import('./modules/projects/projects.module').then(
+        (m) => m.ProjectsModule
+      ),
+  },
+  {
     path: 'activities',
     loadChildren: () =>
       import('./modules/activities/activities.module').then(
