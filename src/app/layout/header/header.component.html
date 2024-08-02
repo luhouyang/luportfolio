@@ -1,5 +1,12 @@
 <header class="wrapper row">
-  <img src="/public/assets/darkmode.svg" alt="Logo Image" class="logo" />
+  <a
+    class="logolink"
+    [routerLink]="['']"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <img src="/public/assets/darkmode.svg" alt="Logo Image" class="logo" />
+  </a>
 
   <!-- <div class="row gap-1">
       <a
