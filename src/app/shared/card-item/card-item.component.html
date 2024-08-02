@@ -5,19 +5,19 @@
     </ng-template>
     <p>{{ cardInfo.content }}</p>
     <ng-template pTemplate="footer">
-      <a
+      <!-- <a
         [routerLink]="cardInfo.hyperlink"
         aria-label="More Info"
         routerLinkActive="active"
-      >
-        <!-- <a
+      > -->
+      <a
         aria-label="More Info"
         [routerLink]="cardInfo.hyperlink"
         fragment="{{ cardInfo.fragment }}"
         routerLinkActive="active"
-        target="_top"
+        target="_blank"
         rel="noopener"
-      > -->
+      >
         <p-button label="More Info" class="w-full" styleClass="w-full" />
       </a>
     </ng-template>

@@ -17,7 +17,7 @@ export class CardItemComponent {
     content: '',
     imagePath: '',
     hyperlink: '',
-    // fragment: '',
+    fragment: '',
   };
 
   constructor() {}

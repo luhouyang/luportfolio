@@ -3,5 +3,5 @@ export interface CardInfo {
     content: string;
     imagePath: string;
     hyperlink: string | string[];
-    // fragment: string;
+    fragment: string;
 }
