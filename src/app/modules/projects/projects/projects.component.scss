@@ -2,9 +2,8 @@
   box-sizing: border-box;
 
   .image {
-    width: 50%;
+    width: 55%;
     height: auto;
-    object-fit: cover;
   }
 
   .description {
@@ -34,6 +33,10 @@
     border-radius: 5px;
     font-weight: bold;
     margin-top: 10px;
+  }
+
+  .button:hover {
+    background-color: var(--blue-highlight);
   }
 }
 
