@@ -81,18 +81,22 @@
 
 @media (max-width: 830px) {
   .wrapper {
-    .about {
-      .myname {
-        font-size: larger;
+    .selfintro {
+      .image {
+        max-width: 300px;
+      }
+
+      .about {
+        .myname {
+          font-size: larger;
+        }
       }
     }
 
-    .image {
-      max-width: 300px;
-    }
-
-    .projects {
-      width: 100%;
+    .ongoing {
+      .column {
+        width: 100%;
+      }
     }
   }
 }
