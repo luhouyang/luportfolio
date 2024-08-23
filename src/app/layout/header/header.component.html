@@ -1,57 +1,67 @@
-<header class="wrapper row">
-  <a
-    class="logolink"
-    [routerLink]="['']"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }"
-  >
-    <img src="/public/assets/darkmode.svg" alt="Logo Image" class="logo" />
-  </a>
+<header class="wrapper">
+  <div class="row space-between px-16">
+    <a
+      class="logolink"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <img src="/public/assets/darkmode.svg" alt="Logo Image" class="logo" />
+    </a>
 
-  <!-- <div class="row gap-1">
+    <!-- Burger Menu -->
+    <div class="burger-menu" id="burgerMenu" (click)="openSideMenu()">
+      &#9776;
+    </div>
+    <div class="close-btn" id="closeBtn" (click)="closeSideMenu()">&times;</div>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
       <a
+        class=""
         routerLink="/"
-        routerLinkActive="active"
+        routerLinkActive="active-link"
         [routerLinkActiveOptions]="{ exact: true }"
-        >Home</a
+        >About</a
       >
-      <a routerLink="/projects" routerLinkActive="active">Projects</a>
-      <a routerLink="/activities" routerLinkActive="active">Activities</a>
-      <a routerLink="/contact" routerLinkActive="active">Contact</a>
-    </div> -->
+      <a class="" routerLink="projects" routerLinkActive="active-link"
+        >Projects</a
+      >
+      <a class="" routerLink="activities" routerLinkActive="active-link"
+        >Activities</a
+      >
+      <a class="" routerLink="contact" routerLinkActive="active-link"
+        >Contact</a
+      >
+    </div>
 
-  <p-menubar [model]="items" class="menu">
-    <ng-template pTemplate="item" let-item let-root="root">
-      <ng-container *ngIf="item.route; else urlRef">
-        <a
-          [routerLink]="item.route"
-          class="p-menuitem-link"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          tabindex="0"
-        >
-          <span [class]="item.icon"></span>
-          <span class="ml-5">{{ item.label }}</span>
-        </a>
-      </ng-container>
-      <ng-template #urlRef>
-        <a
-          *ngIf="item.url; else noLink"
-          [href]="item.url"
-          class="p-menuitem-link"
-          tabindex="0"
-        >
-          <span [class]="item.icon"></span>
-          <span class="ml-5">{{ item.label }}</span>
-        </a>
-      </ng-template>
-      <ng-template #noLink>
-        <div class="p-menuitem-link">
-          <span [class]="item.icon"></span>
-          <span class="ml-5">{{ item.label }}</span>
-          <span class="pi pi-fw pi-angle-down ml-5"></span>
-        </div>
-      </ng-template>
-    </ng-template>
-  </p-menubar>
+    <!-- Regular Navigation -->
+    <div class="row navigation">
+      <a
+        class="primary-borderless-button"
+        routerLink="/"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >About</a
+      >
+      <a
+        class="primary-borderless-button"
+        routerLink="projects"
+        routerLinkActive="active-link"
+        >Projects</a
+      >
+      <a
+        class="primary-borderless-button"
+        routerLink="activities"
+        routerLinkActive="active-link"
+        >Activities</a
+      >
+      <a
+        class="primary-borderless-button"
+        routerLink="contact"
+        routerLinkActive="active-link"
+        >Contact</a
+      >
+    </div>
+  </div>
 </header>

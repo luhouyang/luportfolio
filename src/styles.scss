@@ -1,9 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./styles/variables.scss";
 @import "./styles/theme-overrides.scss";
-@import "primeicons/primeicons.css";
-@import "primeng/resources/themes/lara-dark-blue/theme.css";
-@import "primeng/resources/primeng.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 html,
 body,
@@ -15,6 +14,8 @@ h4 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  color: var(--secondary-color);
 }
 
 html,
@@ -28,6 +29,11 @@ app-root {
   flex-direction: column;
 }
 
+// set font
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -38,57 +44,228 @@ app-root {
   flex-direction: column;
 }
 
-// box model, margin, border, padding
-.ml-5 {
-  margin-left: 5px;
+// components
+
+// scroll bar
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.mt-5 {
-  margin-top: 5px;
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--gray-4);
 }
 
-.mt-15 {
-  margin-top: 15px;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--seen-blue-2);
 }
 
-.mt-25 {
-  margin-top: 25px;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
 }
 
-.mb-5 {
-  margin-bottom: 5px;
+// buttons
+.primary-borderless-button {
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 8px;
+
+  border-bottom: 2px solid var(--secondary-color);
+
+  text-decoration: none;
+  text-align: center;
+  color: var(--tertiary-color);
 }
 
-.mb-15 {
-  margin-bottom: 15px;
+.primary-borderless-button:hover {
+  background-color: var(--tertiary-bg);
+  color: var(--primary-color);
+}
+.primary-borderless-button.active-link {
+  font-weight: bold;
+  background-color: var(--secondary-bg);
+  color: var(--secondary-color);
 }
 
-.mb-25 {
-  margin-bottom: 25px;
+.primary-rounded-button {
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  border: 1.5px solid var(--primary-color);
+  border-radius: 36px;
+
+  text-decoration: none;
+  color: var(--primary-color);
+
+  text-align: center;
 }
 
-.py-5 {
-  padding-top: 5px;
-  padding-bottom: 5px;
+.primary-rounded-button:hover,
+.primary-rounded-button.active-link {
+  color: white;
+  border-color: white;
+  background-color: var(--primary-color);
 }
 
-.py-10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.primary-square-button {
+  margin: 16px;
+
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  border: 1.5px solid black;
+  border-radius: 16px;
+
+  background-color: var(--primary-color);
+
+  text-decoration: none;
+  font-weight: 700;
+  font-size: large;
+  color: black;
+
+  text-align: center;
 }
 
-.px-5 {
-  padding-left: 5px;
-  padding-right: 5px;
+.primary-square-button:hover,
+.primary-square-button.active-link {
+  color: var(--primary-color);
+  border: 1.5px solid var(--primary-color);
+  background-color: black;
 }
 
-.px-10 {
-  padding-left: 10px;
-  padding-right: 10px;
+.secondary-square-button {
+  display: inline-block;
+
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  // border: 1.5px solid var(--black);
+  border-radius: 8px;
+
+  background-color: var(--secondary-bg);
+
+  text-decoration: none;
+  font-weight: 700;
+  font-size: large;
+  color: var(--secondary-color);
+
+  text-align: center;
 }
 
-.wrap {
-  flex-wrap: wrap;
+.secondary-square-button:hover,
+.secondary-square-button.active-link {
+  background-color: var(--tertiary-color);
+}
+
+// anchor links
+.white-link-text {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.white-link-text:hover {
+  color: black;
+}
+
+// padding
+.px-4 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.py-4 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.px-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.px-36 {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.py-36 {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.px-64 {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.py-64 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+// margin
+.mt-4 {
+  margin-top: 4px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mt-36 {
+  margin-top: 36px;
+} 
+
+.mb-36 {
+  margin-bottom: 36px;
+}
+
+// gap
+.gap-02 {
+  gap: 0.2rem;
 }
 
 .gap-05 {
@@ -103,8 +280,12 @@ app-root {
   gap: 2rem;
 }
 
-.gap-5 {
-  gap: 5rem;
+.gap-4 {
+  gap: 4rem;
+}
+
+.gap-8 {
+  gap: 8rem;
 }
 
 // main axis
@@ -145,11 +326,6 @@ app-root {
   align-items: end;
 }
 
-// card
-.three-items {
-  width: 33%;
-}
-
 // others
 .full-center {
   align-items: center;
@@ -165,25 +341,6 @@ app-root {
   opacity: 0.5;
 }
 
-// links
-.social-links {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-}
-
-.social-links path {
-  transition: fill 0.3s ease;
-  fill: var(--blue-400);
-}
-
-.social-links a:hover svg path {
-  fill: var(
-    --cyan-100
-  ); /* Make sure the path fill is transparent to see the gradient */
-}
-
 // resizing
 @media (max-width: 768px) {
   .row {
@@ -193,6 +350,54 @@ app-root {
   .column {
     width: 100%; /* Make each column occupy full width */
   }
+
+  .gap-4 {
+    gap: 2rem;
+  }
+
+  .gap-8 {
+    gap: 3rem;
+  }
+
+  .px-64 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .py-64 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .primary-square-button {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gap-4 {
+    gap: 0.5rem !important;
+  }
+
+  .gap-8 {
+    gap: 1rem !important;
+  }
+}
+
+// others
+.full-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 // animations
@@ -276,83 +481,83 @@ app-root {
   }
 }
 
-@keyframes borderRgbFlash {
-  0% {
-    background-position: 0% 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
+// @keyframes borderRgbFlash {
+//   0% {
+//     background-position: 0% 0;
+//   }
+//   100% {
+//     background-position: 100% 0;
+//   }
+// }
 
-.fastBorderColourCircular {
-  position: relative;
-  display: inline-block;
+// .fastBorderColourCircular {
+//   position: relative;
+//   display: inline-block;
 
-  &:hover::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(
-      60deg,
-      transparent,
-      transparent,
-      transparent,
-      rgb(255, 0, 0),
-      rgb(255, 128, 0),
-      rgb(255, 255, 0),
-      rgb(0, 255, 0),
-      rgb(0, 255, 255),
-      rgb(0, 0, 255),
-      rgb(255, 0, 255),
-      rgb(128, 0, 255),
-      rgb(255, 0, 0),
-      transparent,
-      transparent,
-      transparent
-    );
-    background-size: 1000%;
-    border-radius: 50%; /* Matches the profile image's border-radius */
-    z-index: -1;
-    animation: borderRgbFlash 1.25s alternate-reverse ease-out;
-  }
-}
+//   &:hover::before {
+//     content: "";
+//     position: absolute;
+//     top: -2px;
+//     left: -2px;
+//     right: -2px;
+//     bottom: -2px;
+//     background: linear-gradient(
+//       60deg,
+//       transparent,
+//       transparent,
+//       transparent,
+//       rgb(255, 0, 0),
+//       rgb(255, 128, 0),
+//       rgb(255, 255, 0),
+//       rgb(0, 255, 0),
+//       rgb(0, 255, 255),
+//       rgb(0, 0, 255),
+//       rgb(255, 0, 255),
+//       rgb(128, 0, 255),
+//       rgb(255, 0, 0),
+//       transparent,
+//       transparent,
+//       transparent
+//     );
+//     background-size: 1000%;
+//     border-radius: 50%; /* Matches the profile image's border-radius */
+//     z-index: -1;
+//     animation: borderRgbFlash 1.25s alternate-reverse ease-out;
+//   }
+// }
 
-.fastBorderColourCard {
-  position: relative;
-  display: inline-block;
+// .fastBorderColourCard {
+//   position: relative;
+//   display: inline-block;
 
-  &:hover::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(
-      60deg,
-      transparent,
-      transparent,
-      transparent,
-      rgb(255, 0, 0),
-      rgb(255, 128, 0),
-      rgb(255, 255, 0),
-      rgb(0, 255, 0),
-      rgb(0, 255, 255),
-      rgb(0, 0, 255),
-      rgb(255, 0, 255),
-      rgb(128, 0, 255),
-      rgb(255, 0, 0),
-      transparent,
-      transparent,
-      transparent
-    );
-    background-size: 2000%;
-    border-radius: 1%; /* Matches the profile image's border-radius */
-    z-index: -1;
-    animation: borderRgbFlash 1.25s alternate-reverse ease-out;
-  }
-}
+//   &:hover::before {
+//     content: "";
+//     position: absolute;
+//     top: -2px;
+//     left: -2px;
+//     right: -2px;
+//     bottom: -2px;
+//     background: linear-gradient(
+//       60deg,
+//       transparent,
+//       transparent,
+//       transparent,
+//       rgb(255, 0, 0),
+//       rgb(255, 128, 0),
+//       rgb(255, 255, 0),
+//       rgb(0, 255, 0),
+//       rgb(0, 255, 255),
+//       rgb(0, 0, 255),
+//       rgb(255, 0, 255),
+//       rgb(128, 0, 255),
+//       rgb(255, 0, 0),
+//       transparent,
+//       transparent,
+//       transparent
+//     );
+//     background-size: 2000%;
+//     border-radius: 1%; /* Matches the profile image's border-radius */
+//     z-index: -1;
+//     animation: borderRgbFlash 1.25s alternate-reverse ease-out;
+//   }
+// }

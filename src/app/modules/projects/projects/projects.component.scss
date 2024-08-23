@@ -3,7 +3,12 @@
 
   .image {
     width: 55%;
+    max-width: 700px;
+
     height: auto;
+    max-height: 400px;
+
+    object-fit: contain;
   }
 
   .description {
@@ -21,22 +26,6 @@
   .description p {
     margin: 0;
     line-height: 1.5;
-  }
-
-  .button {
-    display: inline-block;
-    background-color: #ffffff;
-    // color: #ff5722;
-    color: var(--medium-blue);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-
-  .button:hover {
-    background-color: var(--blue-highlight);
   }
 }
 

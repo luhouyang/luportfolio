@@ -1,32 +1,57 @@
 .wrapper {
   box-sizing: border-box;
 
-  .about {
-    .introduction {
-      text-align: justify;
-    }
+  padding: 24px;
 
-    .myname {
-      font-size: x-large;
-      background-image: linear-gradient(
-        to bottom right,
-        #00fff2,
-        #78f5ef,
-        #dffffd
-      );
-      background-clip: border-box;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  .selfintro {
+    .image {
+      width: 400px;
+
+      .profile-image {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    .about {
+      .introduction {
+        text-align: justify;
+      }
+
+      .myname {
+        font-size: x-large;
+        background-image: linear-gradient(
+          to bottom right,
+          #00fff2,
+          #78f5ef,
+          #dffffd
+        );
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 
-  .image {
-    width: 400px;
+  .ongoing {
+    justify-content: space-around;
 
-    .profile-image {
-      display: block;
-      width: 100%;
-      border-radius: 50%;
+    .column {
+      border: 1.5px solid var(--secondary-color);
+      border-radius: 16px;
+
+      width: 30%;
+    }
+
+    .image {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+
+      margin-bottom: 16px;
+    }
+
+    .description {
+      padding: 16px;
     }
   }
 

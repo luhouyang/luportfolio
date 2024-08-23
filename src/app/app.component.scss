@@ -1,9 +1,13 @@
 .wrapper {
-    height: auto;
-    padding: 40px;
-    width: 100%;
-  
-    flex-grow: 1;
-    box-sizing: border-box;
+  height: auto;
+  width: 100%;
+
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  background-color: var(--primary-bg);
+
+  .page-content {
+    margin-top: 80px;
   }
-  
+}

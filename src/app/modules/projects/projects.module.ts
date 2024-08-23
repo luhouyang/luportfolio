@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsComponent } from './projects/projects.component';
-import { CardItemComponent } from '../../shared/card-item/card-item.component';
 
 
 @NgModule({
@@ -12,8 +11,7 @@ import { CardItemComponent } from '../../shared/card-item/card-item.component';
   ],
   imports: [
     CommonModule,
-    ProjectsRoutingModule,
-    CardItemComponent
+    ProjectsRoutingModule
   ]
 })
 export class ProjectsModule { }

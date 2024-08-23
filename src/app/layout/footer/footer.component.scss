@@ -1,13 +1,41 @@
 .wrapper {
-  height: 80px;
+  height: 120px;
 
-  border-top: 1px solid var(--border-color);
   box-sizing: border-box;
 
-  padding-bottom: 15px;
-
-  .copyright {
-    font-size: 0.875rem;
+  .ft {
+    height: 100%;
+    
+    .footer-link {
+      padding-left: 8px;
+      padding-right: 8px;
+  
+      text-decoration: none;
+      color: var(--tertiary-color);
+    }
+    .footer-link:hover {
+      color: var(--primary-color);
+    }
+  
+    .social-links {
+  
+      a {
+        svg {
+          fill: var(--secondary-color);
+        }
+      }
+      
+      a:hover {
+        svg {
+          fill: var(--primary-color);
+        }
+        
+      }
+    }
+  
+    .copyright {
+      font-size: 0.875rem;
+    }
   }
 }
 

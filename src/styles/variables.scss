@@ -1,7 +1,70 @@
 :root {
-  --bg-color: white;
-  --header-color: white;
-  --border-color: rgb(210, 210, 210);
-  --medium-blue: rgb(0, 128, 255);
-  --blue-highlight: #00fff2;
+  --primary-color: #00fff2;
+  --secondary-color: #fffee0;
+  --tertiary-color: #009d95;
+
+  --primary-bg: #020510;
+  --secondary-bg: #1c39bb;
+  --tertiary-bg: #768bea;
+
+  --highlight-1: #007670;
+
+  --black: #000000;
+  --white: #ffffff;
+
+  // persian blue
+  --persian-blue: #1c39bb;
+
+  --persian-1: #dce2fa;
+  --persian-2: #a9b6f2;
+  --persian-3: #768bea;
+  --persian-4: #3251e0;
+  --persian-5: #2143dd;
+  --persian-6: #1c39bb;
+  --persian-7: #142988;
+  --persian-8: #0d1a55;
+  --persian-9: #080f33;
+  --persian-10: #020510;
+
+  // light blue
+  --light-blue: #00fff2;
+
+  --light-blue-1: #98fffd;
+  --light-blue-2: #b1fffb;
+  --light-blue-3: #76fff8;
+  --light-blue-4: #14fff3;
+  --light-blue-5: #00d8cd;
+  --light-blue-6: #009d95;
+  --light-blue-7: #007670;
+  --light-blue-8: #004e4a;
+  --light-blue-9: #002725;
+  --light-blue-10: #001413;
+
+  // marigold
+  --marigold: #eaa221;
+
+  --marigold-1: #f9e6c2;
+  --marigold-2: #ead421;
+  --marigold-3: #edb145;
+  --marigold-4: #ea8121;
+  --marigold-5: #d08d14;
+  --marigold-6: #ac7410;
+  --marigold-7: #76500b;
+  --marigold-8: #533808;
+  --marigold-9: #2f2004;
+  --marigold-10: #1d1403;
+
+  // cream
+  --cream: #fffee0;
+
+  --cream-1: #fffee0;
+  --cream-2: #fffca5;
+  --cream-3: #fff943;
+  --cream-4: #e0d900;
+  --cream-5: #e0fffe;
+  --cream-6: #ffe0e1;
+  --cream-7: #e0e1ff;
+  --cream-8: #f1ffe0;
+  --cream-9: #ffefe0;
+  --cream-10: #080800;
 }

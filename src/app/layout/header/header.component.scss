@@ -1,85 +1,88 @@
 .wrapper {
-  width: 100%;
+  --header-height: 80px;
 
-  border-bottom: 1.5px solid var(--primary-color);
+  width: 100%;
+  height: var(--header-height);
+
   box-sizing: border-box;
 
-  a {
-    text-decoration: none;
-    font-weight: 300;
-    color: white;
+  position: fixed;
+  z-index: 900;
 
-    &.active {
-      font-weight: bolder;
-      color: var(--primary-color);
-    }
-  }
+  background-color: var(--primary-bg);
 
   .logolink {
     margin-right: auto;
 
     .logo {
-      height: 2rem;
-      object-fit: contain;
-
-      margin-right: auto;
-      margin-left: 30px;
-      margin-top: 1.75rem;
+      margin-top: 25px;
+      height: 40px;
     }
   }
 
-  p-menubar {
-    padding: 0.5rem;
-    margin: 0;
+  .navigation {
+    margin-top: 20px;
+
+    height: 60px;
   }
 
-  .p-menuitem-link:hover {
-    color: var(--cyan-100);
-    outline: none; /* Optional: removes the default focus outline */
+  // burger menu
+  .burger-menu {
+    display: none;
+    color: var(--primary-color);
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 15px;
+    z-index: 1000;
+  }
+
+  .close-btn {
+    display: none;
+    color: var(--primary-color);
+    top: 15px;
+    margin-right: 15px;
+    font-size: 36px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-bg-color);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 999;
+
+    a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: var(--primary-color);
+    }
   }
 }
 
-@media (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .row {
     flex-direction: row;
   }
 
-  .column {
-    flex-direction: column;
+  .burger-menu {
+    display: inline !important;
   }
 
-  p-menubar {
-    min-width: 30%;
+  .row.navigation {
+    display: none !important;
   }
-
-  ::ng-deep p-menubar .p-menubar-root-list {
-    background: var(--surface-0) !important;
-  }
-}
-
-@media (max-width: 500px) {
-  .row {
-    flex-direction: row;
-  }
-
-  .column {
-    flex-direction: column;
-  }
-
-  p-menubar {
-    min-width: 40%;
-  }
-
-  ::ng-deep p-menubar .p-menubar-root-list {
-    background: var(--surface-0) !important;
-  }
-}
-
-::ng-deep p-menubar .p-component {
-  background: transparent !important;
-  border: none !important;
-}
-
-::ng-deep p-menubar .p-menubar-root-list {
-  background: transparent;
 }

@@ -1,10 +1,10 @@
 <div class="wrapper">
-  <div class="column gap-5">
+  <div class="column gap-4">
     <!-- PROFILE PIC & SELF INTRO -->
-    <div class="row gap-2">
+    <div class="row gap-2 selfintro">
       <div class="column justify-center">
         <div class="row align-center">
-          <div class="column image fastBorderColourCircular">
+          <div class="column image">
             <img
               src="/public/assets/profile_image.webp"
               alt="Profile Image"
@@ -15,7 +15,6 @@
       </div>
 
       <div class="about column justify-center">
-        <!-- <h1 class="mb-5"><span class="smoothColour">About</span></h1> -->
         <p>Hello! I'm</p>
         <div class="myname">
           <h1><span class="fastColour">Lu Hou Yang</span></h1>
@@ -37,15 +36,80 @@
     </div>
 
     <!-- Open Source Contributions, FYP Progress, UTP Google Classroom -->
-    <div>
+    <div class="">
       <h2><span class="smoothColour">Ongoing Projects</span></h2>
       <hr class="solid" />
-      <div class="row gap-2">
-        <app-card-item
-          class="three-items projects"
-          *ngFor="let project of ongoingProjectList"
-          [cardInfo]="project"
-        ></app-card-item>
+      <div class="row gap-2 ongoing mt-36 mb-16">
+        <div class="column">
+          <img
+            src="/public/assets/gdsc_utp_logo.webp"
+            alt="Google Classroom Image"
+            class="image"
+          />
+          <div class="description">
+            <p>
+              Google Classroom started to share workshop materials to all UTP
+              students and other interested people. With hands-on tutorians and
+              full explainations on latest technologies such as TensorFlow,
+              Flutter, Firebase, GitHub and more. The materials are maintained
+              by me and my friends as a side project and initiative to raise
+              technicality level of students.
+            </p>
+            <a
+              href="https://classroom.google.com/c/NjkzNzI5NzE5NTUy?cjc=tlab4o7"
+              class="secondary-square-button"
+              target="_blank"
+              rel="noopener"
+              >Join Google Classroom</a
+            >
+          </div>
+        </div>
+
+        <div class="column">
+          <img
+            src="/public/assets/seenredlong_padded.webp"
+            alt="SEEN NGO"
+            class="image"
+          />
+          <div class="description">
+            <p>
+              I developed a dynamic website for Sabah Entitlement & Equity Now
+              (SEEN), a youth-driven NGO focused on educating and empowering
+              Sabahans about their rights. The site highlights key social,
+              economic, and political issues, providing an accessible platform
+              for the youth of Sabah to stay informed and engaged.
+            </p>
+            <a
+              href="https://seen-ngo-website.pages.dev/"
+              class="secondary-square-button"
+              target="_blank"
+              rel="noopener"
+              >Visit Site</a
+            >
+          </div>
+        </div>
+
+        <div class="column">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/card-ng.jpg"
+            alt="Coming Soon!"
+            class="image"
+          />
+          <div class="description">
+            <p>
+              Exciting new content is on the way! Stay tuned for updates and be
+              the first to discover what's coming next. Check back soon for more
+              details and information!
+            </p>
+            <a
+              href="https://classroom.google.com/c/NjkzNzI5NzE5NTUy?cjc=tlab4o7"
+              class="secondary-square-button"
+              target="_blank"
+              rel="noopener"
+              >Coming Soon!</a
+            >
+          </div>
+        </div>
       </div>
     </div>
 
