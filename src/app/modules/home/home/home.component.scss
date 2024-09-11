@@ -1,7 +1,7 @@
 .wrapper {
   box-sizing: border-box;
 
-  padding: 24px;
+  margin: 24px;
 
   .selfintro {
     .image {
@@ -34,24 +34,66 @@
   }
 
   .ongoing {
-    justify-content: space-around;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 16px;
+
+      .image {
+        width: 100%;
+        max-height: 300px;
+        min-height: 100px;
+        object-fit: cover;
+
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+
+        margin-bottom: 16px;
+      }
+    }
+
+    .column {
+      min-width: 400px;
+      max-width: 50%;
+      border: 1.5px solid var(--secondary-color);
+      border-radius: 16px;
+      flex: 1;
+    }
+
+    .description {
+      margin: 16px;
+    }
+  }
+
+  .activities {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 16px;
+
+      .image {
+        width: 100%;
+        max-height: 300px;
+        min-height: 100px;
+        object-fit: cover;
+
+        aspect-ratio: 4 / 3;
+
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+      }
+    }
 
     .column {
       border: 1.5px solid var(--secondary-color);
       border-radius: 16px;
-
-      width: 30%;
-    }
-
-    .image {
-      border-top-left-radius: 16px;
-      border-top-right-radius: 16px;
-
-      margin-bottom: 16px;
+      flex: 1;
     }
 
     .description {
-      padding: 16px;
+      margin: 16px;
     }
   }
 
@@ -79,7 +121,22 @@
   }
 }
 
-@media (max-width: 830px) {
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 1; /* Image stays fully visible */
+  }
+  30% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.1; /* Image fades out gradually */
+  }
+}
+
+@media (max-width: 880px) {
   .wrapper {
     .selfintro {
       .image {
@@ -95,7 +152,7 @@
 
     .ongoing {
       .column {
-        width: 100%;
+        max-width: 100% !important;
       }
     }
   }
