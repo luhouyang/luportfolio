@@ -1,9 +1,8 @@
 .wrapper {
   box-sizing: border-box;
+  min-height: calc(100vh - 200px);
 
-  height: calc(100vh - 200px);
-
-  padding-top: 10vh;
+  padding-top: 10%;
   padding-bottom: 36px;
 
   .contact-container {
