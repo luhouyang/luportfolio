@@ -32,4 +32,11 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./modules/contact/contact.module').then((m) => m.ContactModule),
   },
+  {
+    path: 'gh',
+    loadChildren: () =>
+      import('./modules/github-page/github-page.module').then(
+        (m) => m.GithubPageModule
+      ),
+  },
 ];
