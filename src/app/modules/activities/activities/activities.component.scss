@@ -5,6 +5,11 @@
   margin: 24px;
 
   .activities {
+    h2 {
+      margin-top: 32px;
+      font-size: xx-large;
+    }
+
     .row {
       display: flex;
       flex-wrap: wrap;

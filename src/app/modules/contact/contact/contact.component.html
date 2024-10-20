@@ -1,6 +1,6 @@
 <div class="wrapper">
-  <div class="contact-container">
-    <h1>Contact Us</h1>
+  <!-- <div class="contact-container">
+    <h1>Contact Me</h1>
     <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
@@ -25,7 +25,7 @@
           required
           [(ngModel)]="contactData.email"
           name="email"
-          #email="ngModel"
+          #email="ngModel" 
         />
         <div *ngIf="email.invalid && email.touched" class="error">
           Valid email is required.
@@ -48,5 +48,15 @@
 
       <button type="submit" [disabled]="contactForm.invalid">Send</button>
     </form>
+  </div> -->
+  <div class="row justify-center">
+    <div class="column align-center">
+      <h1>Contact Me</h1>
+      <a href="mailto:luhouyang@gmail.com" class="secondary-square-button">
+        <p>
+          <b>luhouyang&#64;gmail.com</b>
+        </p>
+      </a>
+    </div>
   </div>
 </div>
