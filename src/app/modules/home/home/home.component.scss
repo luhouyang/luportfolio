@@ -247,7 +247,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 760px) {
   .wrapper {
     .portfolio {
       .row {
@@ -298,10 +298,6 @@
       .column {
         max-width: 100% !important;
       }
-    }
-
-    p {
-      font-size: small;
     }
   }
 }
