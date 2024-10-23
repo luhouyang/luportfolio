@@ -37,7 +37,7 @@
     .row {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-evenly;
       gap: 16px;
 
       .image {
@@ -46,8 +46,8 @@
         min-height: 100px;
         object-fit: cover;
 
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
+        border-top-left-radius: var(--border-radius-1);
+        border-top-right-radius: var(--border-radius-1);
 
         margin-bottom: 16px;
       }
@@ -56,9 +56,14 @@
     .column {
       min-width: 400px;
       max-width: 50%;
-      border: 1.5px solid var(--secondary-color);
-      border-radius: 16px;
+      background-color: var(--highlight-2);
+      // border: 1.5px solid var(--secondary-color);
+      border-radius: var(--border-radius-1);
       flex: 1;
+    }
+
+    .column:hover {
+      border: 1.5px solid var(--secondary-color);
     }
 
     .description {
@@ -66,32 +71,123 @@
     }
   }
 
-  .activities {
+  .portfolio {
     .row {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-evenly;
       gap: 16px;
 
       .image {
         width: 100%;
         max-height: 350px;
-        min-width: 350px;
-        min-height: 100px;
+        // min-width: 350px;
+        // min-height: 100px;
         object-fit: cover;
 
         aspect-ratio: 4 / 3;
 
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
+        border-top-left-radius: var(--border-radius-1);
+        border-top-right-radius: var(--border-radius-1);
       }
     }
 
     .column {
-      max-width: 50%;
-      border: 1.5px solid var(--secondary-color);
-      border-radius: 16px;
+      min-width: 30%;
+      max-width: 30%;
+      background-color: var(--highlight-2);
+      // border: 1.5px solid var(--secondary-color);
+      border-radius: var(--border-radius-1);
       flex: 1;
+
+      justify-content: space-between;
+    }
+
+    .column:hover {
+      border: 1.5px solid var(--secondary-color);
+    }
+
+    .description {
+      margin-left: 16px;
+      margin-right: 16px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      p {
+        margin-top: 8px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .content {
+      margin-left: 16px;
+      margin-right: 16px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+
+      .links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .github {
+          svg {
+            fill: var(--secondary-color);
+          }
+
+          &:hover {
+            svg {
+              fill: #6e5494;
+            }
+          }
+        }
+
+        .webapp {
+          svg {
+            fill: var(--secondary-color);
+          }
+
+          &:hover {
+            svg {
+              fill: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .activities {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 16px;
+
+      .image {
+        width: 100%;
+        max-height: 350px;
+        // min-width: 350px;
+        // min-height: 100px;
+        object-fit: cover;
+
+        aspect-ratio: 4 / 3;
+
+        border-top-left-radius: var(--border-radius-1);
+        border-top-right-radius: var(--border-radius-1);
+      }
+    }
+
+    .column {
+      min-width: 30%;
+      max-width: 30%;
+      background-color: var(--highlight-2);
+      // border: 1.5px solid var(--secondary-color);
+      border-radius: var(--border-radius-1);
+      flex: 1;
+    }
+
+    .column:hover {
+      border: 1.5px solid var(--secondary-color);
     }
 
     .description {
@@ -106,6 +202,14 @@
 
   h2 {
     font-size: xx-large;
+  }
+
+  h3 {
+    font-size: x-large;
+  }
+
+  h4 {
+    font-size: larger;
   }
 
   ul {
@@ -143,6 +247,20 @@
   }
 }
 
+@media (max-width: 650px) {
+  .wrapper {
+    .portfolio {
+      .row {
+        flex-direction: column;
+      }
+      .column {
+        min-width: 50%;
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+
 @media (max-width: 880px) {
   .wrapper {
     .selfintro {
@@ -159,13 +277,20 @@
 
     .ongoing {
       .column {
-        min-width: 0;
+        min-width: 50%;
         max-width: 100% !important;
+      }
+    }
+
+    .portfolio {
+      .row {
+        flex-direction: row;
       }
     }
 
     .activities {
       .image {
+        max-height: 250px !important;
         min-width: 0 !important;
         min-height: 0 !important;
       }
@@ -173,6 +298,10 @@
       .column {
         max-width: 100% !important;
       }
+    }
+
+    p {
+      font-size: small;
     }
   }
 }

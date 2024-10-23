@@ -18,13 +18,8 @@
     .description {
       top: 20px; /* Adjust as needed */
       right: 20px; /* Adjust as needed */
-      // background-color: #ff5722; /* Solid color background */
-      background-color: var(--medium-blue);
-      color: white;
       padding: 20px;
-      clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
       width: auto; /* Adjust width as needed */
-      box-sizing: border-box;
     }
 
     .description p {

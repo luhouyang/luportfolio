@@ -17,16 +17,38 @@
       color: var(--primary-color);
     }
 
-    .social-links {
-      a {
-        svg {
-          fill: var(--secondary-color);
-        }
+    .github {
+      svg {
+        fill: var(--secondary-color);
       }
 
-      a:hover {
+      &:hover {
         svg {
-          fill: var(--primary-color);
+          fill: #6e5494;
+        }
+      }
+    }
+
+    .linkedin {
+      svg {
+        fill: var(--secondary-color);
+      }
+
+      &:hover {
+        svg {
+          fill: #0a66c2;
+        }
+      }
+    }
+
+    .instagram {
+      svg {
+        fill: var(--secondary-color);
+      }
+
+      &:hover {
+        svg {
+          fill: #f56040;
         }
       }
     }
