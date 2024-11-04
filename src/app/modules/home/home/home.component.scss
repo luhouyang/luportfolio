@@ -71,6 +71,12 @@
     }
   }
 
+  .certifications {
+    .badge {
+      max-height: 200px;
+    }
+  }
+
   .portfolio {
     .row {
       display: flex;
@@ -279,6 +285,17 @@
       .column {
         min-width: 50%;
         max-width: 100% !important;
+      }
+    }
+
+    .certifications {
+      .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .badge {
+        max-height: 150px !important;
       }
     }
 
